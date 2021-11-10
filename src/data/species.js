@@ -28,5 +28,5 @@ const species = [
         "https://utahhome.me/wp-content/uploads/2017/01/GettyImages-157684735.jpg",
     },
   ];
-  ​
+  
   export default species;
