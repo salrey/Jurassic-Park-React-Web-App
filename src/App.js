@@ -4,6 +4,7 @@ import './App.css';
 import species from './data/species';
 import Headings from './components/Headings';
 import ParkInfo from './components/ParkInfo';
+import DinoCard from './components/DinosCard';
 
 
 class App extends Component {
@@ -17,10 +18,12 @@ class App extends Component {
   }
 
   render() {
+    const { currentSpecies, numberOfDinos } = this.state
     return (
       <div className="App">
        <Headings />
-       <ParkInfo currentSpecies={this.state.currentSpecies} numberOfDinos={this.state.numberOfDinos} />
+       <ParkInfo currentSpeciesName={currentSpecies.name} numberOfDinos={numberOfDinos} />
+       <DinoCard dino={currentSpecies}/>
       </div>
     );
   }
