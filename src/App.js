@@ -1,11 +1,9 @@
 import { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import species from './data/species';
 import Headings from './components/Headings';
 import ParkInfo from './components/ParkInfo';
-import DinoCard from './components/DinosCard';
-
+import Park from './components/Park';
 
 class App extends Component {
   constructor() {
@@ -19,11 +17,12 @@ class App extends Component {
 
   render() {
     const { currentSpecies, numberOfDinos } = this.state
+    
     return (
       <div className="App">
        <Headings />
        <ParkInfo currentSpeciesName={currentSpecies.name} numberOfDinos={numberOfDinos} />
-       <DinoCard dino={currentSpecies}/>
+       <Park dinos={species}/>
       </div>
     );
   }
