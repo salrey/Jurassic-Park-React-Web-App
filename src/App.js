@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import species from './data/species';
 import Headings from './components/Headings';
+import ParkInfo from './components/ParkInfo';
 
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
     return (
       <div className="App">
        <Headings />
+       <ParkInfo currentSpecies={this.state.currentSpecies} numberOfDinos={this.state.numberOfDinos} />
       </div>
     );
   }
