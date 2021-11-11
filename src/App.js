@@ -17,9 +17,7 @@ class App extends Component {
 
   getRandomSpecies = () => {
     const i = Math.floor(Math.random() * species.length)
-    this.setState({
-      currentSpecies: species[i]
-    })
+    this.setState({ currentSpecies: species[i] })
   }
 
   addDinos = () => {
@@ -30,19 +28,24 @@ class App extends Component {
   }
 
   reset = () => {
-    this.setState({
-      dinos: [],
-    })
+    this.setState({ dinos: [] })
   }
 
   render() {
-    const { dinos, currentSpecies, numberOfDinos } = this.state
+    const { dinos, currentSpecies } = this.state
     
     return (
       <div className="App">
        <Headings />
-       <Buttons getRandomSpecies={this.getRandomSpecies} addDinos={this.addDinos} reset={this.reset} />
-       <ParkInfo currentSpeciesName={currentSpecies.name} numberOfDinos={dinos.length} />
+       <Buttons 
+        getRandomSpecies={this.getRandomSpecies} 
+        addDinos={this.addDinos} 
+        reset={this.reset} 
+       />
+       <ParkInfo 
+        currentSpeciesName={currentSpecies.name}
+        numberOfDinos={dinos.length}
+       />
        <Park dinos={dinos}/>
       </div>
     );
