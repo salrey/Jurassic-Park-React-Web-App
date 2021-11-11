@@ -11,7 +11,6 @@ class App extends Component {
     super()
     this.state = {
       dinos: [],
-      numberOfDinos: 0,
       currentSpecies: species[0],
     }
   }
@@ -27,14 +26,12 @@ class App extends Component {
     const { dinos, currentSpecies } = this.state;
     this.setState({
       dinos: [...dinos, currentSpecies],
-      numberOfDinos: dinos.length + 1
     })
   }
 
   reset = () => {
     this.setState({
       dinos: [],
-      numberOfDinos: 0
     })
   }
 
@@ -45,7 +42,7 @@ class App extends Component {
       <div className="App">
        <Headings />
        <Buttons getRandomSpecies={this.getRandomSpecies} addDinos={this.addDinos} reset={this.reset} />
-       <ParkInfo currentSpeciesName={currentSpecies.name} numberOfDinos={numberOfDinos} />
+       <ParkInfo currentSpeciesName={currentSpecies.name} numberOfDinos={dinos.length} />
        <Park dinos={dinos}/>
       </div>
     );
