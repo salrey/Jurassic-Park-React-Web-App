@@ -3,7 +3,8 @@
 }
 
 img {
-  height: 200px;
+  height: 150px;
+  border-radius: 10px;
 }
 
 .dino-grid {
@@ -15,6 +16,6 @@ img {
 
 .dino-card {
   min-width: 270px;
-  background-color: wheat;
-  border-radius: 5px;
+  background-color:forestgreen;
+  border-radius: 10px;
 }

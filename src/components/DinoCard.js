@@ -1,8 +1,9 @@
 const DinoCard = (props) => {
+    const { name, image } = props.dino
     return (
         <div className="dino-card">
-            <p>Dinosaur: {props.dino.name}</p>
-            <img src={props.dino.image} alt={props.dino.name} />
+            <p>Dinosaur: {name}</p>
+            <img src={image} alt={name} />
         </div>
     )
 }
